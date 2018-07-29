@@ -4,9 +4,10 @@ require_relative './directions/south'
 require_relative './directions/west'
 
 class Rover
-  def initialize(position, direction_key)
+  def initialize(position, direction_key, plateau)
     @position = position
     @direction = direction(direction_key)
+    @plateau = plateau
   end
 
   def turn_left
@@ -18,6 +19,7 @@ class Rover
   end
 
   def move
+    return unless in_bounds?
     @position = @direction.move(@position)
   end
 
@@ -37,5 +39,16 @@ class Rover
     elsif key == 'S'
       Directions::South.new
     end
+  end
+
+  def in_bounds?
+    position = @direction.move(@position)
+    axis_x = position[:axis_x]
+    axis_y = position[:axis_y]
+    if axis_x > @plateau.width || axis_x < 0 ||
+       axis_y > @plateau.height || axis_y < 0
+      return false
+    end
+    true
   end
 end
