@@ -1,7 +1,3 @@
-require_relative '../../lib/directions/east'
-require_relative '../../lib/directions/north'
-require_relative '../../lib/directions/south'
-
 describe Directions::East do
   let(:east) { described_class.new }
 

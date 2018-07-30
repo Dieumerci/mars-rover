@@ -1,5 +1,3 @@
-require_relative '../lib/commander'
-
 describe Commander do
   describe '#handle_commands' do
     let(:rover) { double }

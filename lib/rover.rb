@@ -1,8 +1,3 @@
-require_relative './directions/east'
-require_relative './directions/north'
-require_relative './directions/south'
-require_relative './directions/west'
-
 class Rover
   def initialize(position, direction_key, plateau)
     @position = position

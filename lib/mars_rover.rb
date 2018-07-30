@@ -1,6 +1,10 @@
 require_relative './plateau'
 require_relative './rover'
 require_relative './commander'
+require_relative './directions/east'
+require_relative './directions/north'
+require_relative './directions/south'
+require_relative './directions/west'
 
 upper_right = ARGF.gets.split
 

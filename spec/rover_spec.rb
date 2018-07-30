@@ -1,6 +1,3 @@
-require_relative '../lib/plateau'
-require_relative '../lib/rover'
-
 describe Rover do
   let(:plateau) { Plateau.new(5, 5) }
   let(:position) { { axis_x: 3, axis_y: 3 } }
