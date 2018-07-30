@@ -6,7 +6,8 @@ require_relative './directions/west'
 class Rover
   def initialize(position, direction_key, plateau)
     @position = position
-    @direction = direction(direction_key)
+    @direction_key = direction_key
+    @direction = direction
     @plateau = plateau
   end
 
@@ -29,14 +30,14 @@ class Rover
 
   private
 
-  def direction(key)
-    if key == 'N'
+  def direction
+    if @direction_key == 'N'
       Directions::North.new
-    elsif key == 'E'
+    elsif @direction_key == 'E'
       Directions::East.new
-    elsif key == 'W'
+    elsif @direction_key == 'W'
       Directions::West.new
-    elsif key == 'S'
+    elsif @direction_key == 'S'
       Directions::South.new
     end
   end
