@@ -16,7 +16,7 @@ describe Rover do
     context 'when it faces west' do
       let(:rover) { Rover.new(position, 'W', plateau) }
 
-      it 'faces WEST' do
+      it 'faces SOUTH' do
         expect(rover.to_s).to eq('3 3 S')
       end
     end
@@ -24,7 +24,7 @@ describe Rover do
     context 'when it faces east' do
       let(:rover) { Rover.new(position, 'E', plateau) }
 
-      it 'faces WEST' do
+      it 'faces NORTH' do
         expect(rover.to_s).to eq('3 3 N')
       end
     end
@@ -32,7 +32,7 @@ describe Rover do
     context 'when it faces south' do
       let(:rover) { Rover.new(position, 'S', plateau) }
 
-      it 'faces WEST' do
+      it 'faces EAST' do
         expect(rover.to_s).to eq('3 3 E')
       end
     end
@@ -44,7 +44,7 @@ describe Rover do
     context 'when it faces north' do
       let(:rover) { Rover.new(position, 'N', plateau) }
 
-      it 'faces WEST' do
+      it 'faces EAST' do
         expect(rover.to_s).to eq('3 3 E')
       end
     end
@@ -52,7 +52,7 @@ describe Rover do
     context 'when it faces west' do
       let(:rover) { Rover.new(position, 'W', plateau) }
 
-      it 'faces WEST' do
+      it 'faces NORTH' do
         expect(rover.to_s).to eq('3 3 N')
       end
     end
@@ -60,7 +60,7 @@ describe Rover do
     context 'when it faces east' do
       let(:rover) { Rover.new(position, 'E', plateau) }
 
-      it 'faces WEST' do
+      it 'faces SOUTH' do
         expect(rover.to_s).to eq('3 3 S')
       end
     end
@@ -90,7 +90,7 @@ describe Rover do
     context 'when it faces north' do
       let(:rover) { Rover.new(position, 'N', plateau) }
 
-      it 'faces WEST' do
+      it 'faces NORTH' do
         expect(rover.to_s).to eq('3 4 N')
       end
     end
@@ -106,7 +106,7 @@ describe Rover do
     context 'when it faces east' do
       let(:rover) { Rover.new(position, 'E', plateau) }
 
-      it 'faces WEST' do
+      it 'faces EAST' do
         expect(rover.to_s).to eq('4 3 E')
       end
     end
@@ -114,7 +114,7 @@ describe Rover do
     context 'when it faces south' do
       let(:rover) { Rover.new(position, 'S', plateau) }
 
-      it 'faces WEST' do
+      it 'faces SOUTH' do
         expect(rover.to_s).to eq('3 2 S')
       end
     end

@@ -18,7 +18,7 @@ describe Commander do
     end
 
     context 'when given input is M' do
-      it 'moves the rover' do
+      it 'moves the rover forward' do
         expect(rover).to receive(:move)
         commander.handle_commands('M')
       end
